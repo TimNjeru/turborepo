@@ -1,0 +1,47 @@
+{
+  "name": "@turborepo/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack --port 3000",
+    "build": "next build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && wrangler deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "opennext": "opennextjs-cloudflare build",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "start": "next start",
+    "lint": "next lint --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.1.1",
+    "@mantine/dates": "^8.1.1",
+    "@mantine/hooks": "^8.1.1",
+    "@mantine/notifications": "^8.1.1",
+    "@repo/ui": "workspace:*",
+    "@tabler/icons-react": "^3.35.0",
+    "@types/react-router-dom": "^5.3.3",
+    "allotment": "1.20.4",
+    "mantine-datatable": "^8.2.0",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-is": "^18.3.1",
+    "react-router-dom": "^7.9.1",
+    "recharts": "^3.0.2",
+    "styled-jsx": "^5.1.7"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.8.2",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "eslint": "^9.34.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "typescript": "5.9.2",
+    "wrangler": "^4.20.5"
+  }
+}
