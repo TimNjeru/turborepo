@@ -1,5 +1,6 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
+import AllotmentDemo from "./components/AllotmentDemo";
 import styles from "./page.module.css";
 
 type Props = Omit<ImageProps, "src"> & {
@@ -66,6 +67,9 @@ export default function Home() {
         <Button appName="web" className={styles.secondary}>
           Open alert
         </Button>
+        
+        {/* Allotment Demo Component */}
+        <AllotmentDemo />
       </main>
       <footer className={styles.footer}>
         <a

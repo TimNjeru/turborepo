@@ -3,10 +3,9 @@
 import React, { useRef } from "react";
 import { Allotment } from "allotment";
 import "allotment/dist/style.css";
-import { AllotmentRef } from "../../src/types";
 
 const AllotmentDemo = () => {
-  const ref = useRef<AllotmentRef>(null);
+  const ref = useRef<any>(null);
 
   const handleReset = () => {
     ref.current?.reset();
